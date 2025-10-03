@@ -374,86 +374,6 @@
             margin-right: 0.8rem;
         }
 
-        .testimonials-carousel {
-            position: relative;
-            margin-top: 3rem;
-            overflow: hidden;
-        }
-
-        .testimonials-track {
-            display: flex;
-            transition: transform 0.5s ease;
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            min-width: 100%;
-            flex-shrink: 0;
-        }
-
-        .carousel-controls {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .carousel-btn {
-            background: rgba(79, 70, 229, 0.2);
-            border: 2px solid #4F46E5;
-            color: #FFFFFF;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-btn:hover {
-            background: #4F46E5;
-            transform: scale(1.1);
-        }
-
-        .carousel-dots {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .dot.active {
-            background: #4F46E5;
-            transform: scale(1.2);
-        }
-
-        .dot:hover {
-            background: rgba(79, 70, 229, 0.6);
-        }
-
-        @media (min-width: 768px) {
-            .testimonial-card {
-                min-width: calc(50% - 1rem);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .testimonial-card {
-                min-width: calc(33.333% - 1.33rem);
-            }
-        }
 
         .testimonial-card {
             background: linear-gradient(135deg, #1E293B 0%, #2D3748 100%);
@@ -1599,7 +1519,7 @@
                     <div class="review-header">
                         <div class="review-avatar">АК</div>
                         <div class="review-info">
-                            <h4>Алексей К.</h4>
+                            <h4>Алексей Кузнецов</h4>
                             <p>Владелец автосалона</p>
                             <span class="review-date">Сентябрь 2024</span>
                         </div>
@@ -1611,7 +1531,7 @@
                     <div class="review-header">
                         <div class="review-avatar">МР</div>
                         <div class="review-info">
-                            <h4>Мария Р.</h4>
+                            <h4>Мария Романова</h4>
                             <p>Управляющий рестораном</p>
                             <span class="review-date">Август 2024</span>
                         </div>
@@ -1623,7 +1543,7 @@
                     <div class="review-header">
                         <div class="review-avatar">ДШ</div>
                         <div class="review-info">
-                            <h4>Дмитрий Ш.</h4>
+                            <h4>Дмитрий Шаров</h4>
                             <p>Директор онлайн-школы</p>
                             <span class="review-date">Июль 2024</span>
                         </div>
@@ -1635,7 +1555,7 @@
                     <div class="review-header">
                         <div class="review-avatar">АМ</div>
                         <div class="review-info">
-                            <h4>Анна М.</h4>
+                            <h4>Анна Морозова</h4>
                             <p>Маркетолог</p>
                             <span class="review-date">Июнь 2024</span>
                         </div>
@@ -1647,7 +1567,7 @@
                     <div class="review-header">
                         <div class="review-avatar">ВП</div>
                         <div class="review-info">
-                            <h4>Владимир П.</h4>
+                            <h4>Владимир Петров</h4>
                             <p>CEO стартапа</p>
                             <span class="review-date">Май 2024</span>
                         </div>
@@ -1659,7 +1579,7 @@
                     <div class="review-header">
                         <div class="review-avatar">ЕС</div>
                         <div class="review-info">
-                            <h4>Елена С.</h4>
+                            <h4>Елена Соколова</h4>
                             <p>Предприниматель</p>
                             <span class="review-date">Апрель 2024</span>
                         </div>
@@ -1671,120 +1591,6 @@
         </div>
     </section>
 
-    <section id="testimonials">
-        <div class="container">
-            <h2 class="section-title" id="testimonials-title">Отзывы клиентов</h2>
-            <p class="section-subtitle" id="testimonials-subtitle">Что говорят о моей работе</p>
-            <div class="testimonials-carousel">
-                <div class="testimonials-track" id="testimonials-track">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">АК</div>
-                            <div class="testimonial-info">
-                                <h4>Алексей</h4>
-                                <p>Владелец интернет-магазина</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Разработал для нас Telegram-бота, который увеличил конверсию на 40%. Быстро разобрался в задаче, предложил отличные решения. Работает стабильно уже полгода. Рекомендую!"</p>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">МС</div>
-                            <div class="testimonial-info">
-                                <h4>Мария</h4>
-                                <p>Маркетолог</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Создал скрипт для автоматизации отчётов, который экономит мне 15 часов в неделю. Всё работает как часы. Очень доволен сотрудничеством!"</p>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">ДП</div>
-                            <div class="testimonial-info">
-                                <h4>Дмитрий</h4>
-                                <p>Основатель стартапа</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Разработал MVP нашего веб-приложения за 3 недели. Качество кода на высоте, всё задокументировано. Продолжаем сотрудничество!"</p>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">ЕВ</div>
-                            <div class="testimonial-info">
-                                <h4>Елена</h4>
-                                <p>Менеджер кафе</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Сделал бота для приёма заказов в нашей кофейне. Клиенты довольны, мы довольны. Теперь не теряем заказы в часы пик. Спасибо!"</p>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">АР</div>
-                            <div class="testimonial-info">
-                                <h4>Андрей</h4>
-                                <p>Риэлтор</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Заказал CRM-систему для агентства. Теперь все клиенты в одном месте, сделки не теряются. Удобно работать, доход вырос на 30%. Отличная работа!"</p>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">ИК</div>
-                            <div class="testimonial-info">
-                                <h4>Игорь</h4>
-                                <p>Владелец ресторана</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Бот для доставки работает отлично! Заказы приходят автоматически, клиенты довольны. Сэкономил на найме оператора. Качество на высоте!"</p>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">ОС</div>
-                            <div class="testimonial-info">
-                                <h4>Ольга</h4>
-                                <p>Фрилансер</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Нужен был парсер для конкурентов. Сделали быстро и качественно. Теперь мониторю цены автоматически. Очень рекомендую этого разработчика!"</p>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">ВН</div>
-                            <div class="testimonial-info">
-                                <h4>Владимир</h4>
-                                <p>IT-директор</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Интегрировали AI-чатбота в нашу систему. Клиенты получают ответы 24/7, нагрузка на поддержку снизилась в 3 раза. Профессиональный подход!"</p>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">НМ</div>
-                            <div class="testimonial-info">
-                                <h4>Наталья</h4>
-                                <p>Владелец салона красоты</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Бот для записи к мастерам - просто находка! Клиенты записываются сами, мы не тратим время на телефонные звонки. Очень удобно и современно!"</p>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                </div>
-                <div class="carousel-controls">
-                    <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">‹</button>
-                    <button class="carousel-btn next-btn" onclick="moveCarousel(1)">›</button>
-                </div>
-                <div class="carousel-dots" id="carousel-dots"></div>
-            </div>
-        </div>
-    </section>
 
     <section id="faq">
         <div class="container">
@@ -2412,89 +2218,8 @@
                 toggleLanguage();
             }
             
-            // Initialize testimonials carousel
-            initCarousel();
         });
 
-        // Testimonials Carousel
-        let currentSlide = 0;
-        const totalSlides = 9;
-        let slidesPerView = 1;
-
-        function initCarousel() {
-            updateSlidesPerView();
-            createDots();
-            updateCarousel();
-            
-            // Auto-play carousel
-            setInterval(() => {
-                moveCarousel(1);
-            }, 5000);
-        }
-
-        function updateSlidesPerView() {
-            if (window.innerWidth >= 1024) {
-                slidesPerView = 3;
-            } else if (window.innerWidth >= 768) {
-                slidesPerView = 2;
-            } else {
-                slidesPerView = 1;
-            }
-        }
-
-        function createDots() {
-            const dotsContainer = document.getElementById('carousel-dots');
-            dotsContainer.innerHTML = '';
-            
-            const totalDots = Math.ceil(totalSlides / slidesPerView);
-            
-            for (let i = 0; i < totalDots; i++) {
-                const dot = document.createElement('div');
-                dot.className = 'dot';
-                if (i === Math.floor(currentSlide / slidesPerView)) {
-                    dot.classList.add('active');
-                }
-                dot.addEventListener('click', () => {
-                    currentSlide = i * slidesPerView;
-                    updateCarousel();
-                });
-                dotsContainer.appendChild(dot);
-            }
-        }
-
-        function moveCarousel(direction) {
-            const maxSlide = totalSlides - slidesPerView;
-            currentSlide += direction;
-            
-            if (currentSlide < 0) {
-                currentSlide = maxSlide;
-            } else if (currentSlide > maxSlide) {
-                currentSlide = 0;
-            }
-            
-            updateCarousel();
-        }
-
-        function updateCarousel() {
-            const track = document.getElementById('testimonials-track');
-            const cardWidth = 100 / slidesPerView;
-            const translateX = -(currentSlide * cardWidth);
-            track.style.transform = `translateX(${translateX}%)`;
-            
-            // Update dots
-            const dots = document.querySelectorAll('.dot');
-            const activeDotIndex = Math.floor(currentSlide / slidesPerView);
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === activeDotIndex);
-            });
-        }
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            updateSlidesPerView();
-            createDots();
-            updateCarousel();
-        });
 
         // Calculator functionality
         function calculatePrice() {

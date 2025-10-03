@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Разработка Telegram-ботов и сайтов под ключ | От 300$ за 7 дней</title>
     <meta name="description" content="⚡ Разрабатываю Telegram-ботов, сайты и автоматизацию для бизнеса. 50+ проектов, 3+ года опыта. Гарантия 30 дней. Цены от 300$. Быстрый запуск за 5-14 дней. Бесплатная консультация!">
+    <link rel="alternate" hreflang="ru" href="https://yoursite.com/?lang=ru">
+    <link rel="alternate" hreflang="en" href="https://yoursite.com/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://yoursite.com/">
     <style>
         * {
             margin: 0;
@@ -68,6 +71,25 @@
 
         .nav-links a:hover {
             color: #06B6D4;
+        }
+
+        .lang-switcher-btn {
+            background: transparent;
+            border: 2px solid #4F46E5;
+            color: #FFFFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-left: 1rem;
+        }
+
+        .lang-switcher-btn:hover {
+            background: #4F46E5;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
         }
 
         .hero {
@@ -573,33 +595,36 @@
         <nav>
             <div class="logo">DevPro</div>
             <ul class="nav-links">
-                <li><a href="#about">О себе</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#portfolio">Портфолио</a></li>
-                <li><a href="#pricing">Тарифы</a></li>
-                <li><a href="#testimonials">Отзывы</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#about" id="nav-about">О себе</a></li>
+                <li><a href="#services" id="nav-services">Услуги</a></li>
+                <li><a href="#portfolio" id="nav-portfolio">Портфолио</a></li>
+                <li><a href="#pricing" id="nav-pricing">Тарифы</a></li>
+                <li><a href="#testimonials" id="nav-testimonials">Отзывы</a></li>
+                <li><a href="#faq" id="nav-faq">FAQ</a></li>
+                <li><a href="#contact" id="nav-contact">Контакты</a></li>
+                <li><button onclick="toggleLanguage()" class="lang-switcher-btn">
+                    <span id="lang-switcher">EN</span>
+                </button></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div>
-            <h1>Разработка под ключ:<br>Боты • Сайты • Автоматизация</h1>
-            <p class="hero-subtitle">Ваши конкуренты автоматизируют бизнес прямо сейчас. Не отставайте! Telegram-боты, сайты и скрипты, которые работают 24/7 и приносят деньги. Запуск за неделю.</p>
+            <h1 id="hero-title">Разработка под ключ:<br>Боты • Сайты • Автоматизация</h1>
+            <p class="hero-subtitle" id="hero-subtitle">Ваши конкуренты автоматизируют бизнес прямо сейчас. Не отставайте! Telegram-боты, сайты и скрипты, которые работают 24/7 и приносят деньги. Запуск за неделю.</p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Получить расчёт стоимости</a>
-                <a href="#portfolio" class="btn btn-secondary">Смотреть примеры работ</a>
+                <a href="#contact" class="btn btn-primary" id="btn-primary">Получить расчёт стоимости</a>
+                <a href="#portfolio" class="btn btn-secondary" id="btn-secondary">Смотреть примеры работ</a>
             </div>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title">Кто я и чем помогаю</h2>
+            <h2 class="section-title" id="about-title">Кто я и чем помогаю</h2>
             <div class="about-content">
-                <p class="about-text" style="font-size: 1.3rem; color: #06B6D4; font-weight: 700; text-align: center; margin-bottom: 2rem;">
+                <p class="about-text" id="about-subtitle" style="font-size: 1.3rem; color: #06B6D4; font-weight: 700; text-align: center; margin-bottom: 2rem;">
                     Full-stack разработчик с командой профессионалов
                 </p>
                 
@@ -620,42 +645,42 @@
 
     <section id="services">
         <div class="container">
-            <h2 class="section-title">Что я разрабатываю</h2>
-            <p class="section-subtitle">Полный цикл разработки — от идеи до готового продукта</p>
+            <h2 class="section-title" id="services-title">Что я разрабатываю</h2>
+            <p class="section-subtitle" id="services-subtitle">Полный цикл разработки — от идеи до готового продукта</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🤖</div>
-                    <h3>Telegram-боты</h3>
+                    <h3 id="service-bots">Telegram-боты</h3>
                     <p>Боты для бизнеса и автоматизации, интеграция с CRM и платёжными системами, магазины и каталоги в Telegram, чат-боты с AI</p>
                     <div class="service-price">От $300</div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🌐</div>
-                    <h3>Веб-сайты</h3>
+                    <h3 id="service-websites">Веб-сайты</h3>
                     <p>Лендинги и корпоративные сайты, интернет-магазины, веб-приложения (SaaS, дашборды), адаптивная вёрстка и SEO</p>
                     <div class="service-price">От $500</div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">⚙️</div>
-                    <h3>Автоматизация и скрипты</h3>
+                    <h3 id="service-automation">Автоматизация и скрипты</h3>
                     <p>Парсинг данных (веб-скрейпинг), автоматизация рутинных задач, интеграция сервисов через API, скрипты для обработки данных</p>
                     <div class="service-price">От $200</div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
-                    <h3>Backend-разработка</h3>
+                    <h3 id="service-backend">Backend-разработка</h3>
                     <p>API и микросервисы, базы данных (PostgreSQL, MongoDB), серверная логика, интеграции со сторонними сервисами</p>
                     <div class="service-price">От $400</div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📊</div>
-                    <h3>CRM и admin-панели</h3>
+                    <h3 id="service-crm">CRM и admin-панели</h3>
                     <p>Панели управления контентом, системы учёта и аналитики, кастомные CRM под задачи бизнеса, дашборды с визуализацией</p>
                     <div class="service-price">От $600</div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🧠</div>
-                    <h3>AI-интеграции</h3>
+                    <h3 id="service-ai">AI-интеграции</h3>
                     <p>Чат-боты с ChatGPT/Claude, обработка текста и изображений, рекомендательные системы, автоматизация с помощью AI</p>
                     <div class="service-price">От $350</div>
                 </div>
@@ -665,8 +690,8 @@
 
     <section id="portfolio">
         <div class="container">
-            <h2 class="section-title">Портфолио</h2>
-            <p class="section-subtitle">Реализованные проекты для различных бизнесов</p>
+            <h2 class="section-title" id="portfolio-title">Портфолио</h2>
+            <p class="section-subtitle" id="portfolio-subtitle">Реализованные проекты для различных бизнесов</p>
             <div class="portfolio-grid">
                 <div class="portfolio-card">
                     <div class="portfolio-image">🤖</div>
@@ -722,12 +747,12 @@
 
     <section id="pricing">
         <div class="container">
-            <h2 class="section-title">Модели оплаты</h2>
-            <p class="section-subtitle">Выберите удобный формат сотрудничества</p>
+            <h2 class="section-title" id="pricing-title">Модели оплаты</h2>
+            <p class="section-subtitle" id="pricing-subtitle">Выберите удобный формат сотрудничества</p>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-icon">⏱️</div>
-                    <h3>Почасовая</h3>
+                    <h3 id="pricing-hourly">Почасовая</h3>
                     <div class="pricing-rate">$40-80<span style="font-size: 1rem; opacity: 0.7;">/час</span></div>
                     <ul>
                         <li>Консультации</li>
@@ -739,7 +764,7 @@
                 </div>
                 <div class="pricing-card featured">
                     <div class="pricing-icon">📦</div>
-                    <h3>За проект</h3>
+                    <h3 id="pricing-project">За проект</h3>
                     <div class="pricing-rate">Фикс</div>
                     <ul>
                         <li>Чёткое ТЗ</li>
@@ -751,7 +776,7 @@
                 </div>
                 <div class="pricing-card">
                     <div class="pricing-icon">🔄</div>
-                    <h3>Ретейнер</h3>
+                    <h3 id="pricing-retainer">Ретейнер</h3>
                     <div class="pricing-rate">От $700<span style="font-size: 1rem; opacity: 0.7;">/мес</span></div>
                     <ul>
                         <li>20-80 часов в месяц</li>
@@ -763,7 +788,7 @@
                 </div>
                 <div class="pricing-card">
                     <div class="pricing-icon">⚡</div>
-                    <h3>Гибридная</h3>
+                    <h3 id="pricing-hybrid">Гибридная</h3>
                     <div class="pricing-rate">Микс</div>
                     <ul>
                         <li>Фикс за MVP</li>
@@ -779,8 +804,8 @@
 
     <section id="testimonials">
         <div class="container">
-            <h2 class="section-title">Отзывы клиентов</h2>
-            <p class="section-subtitle">Что говорят о моей работе</p>
+            <h2 class="section-title" id="testimonials-title">Отзывы клиентов</h2>
+            <p class="section-subtitle" id="testimonials-subtitle">Что говорят о моей работе</p>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
@@ -832,7 +857,7 @@
 
     <section id="faq">
         <div class="container">
-            <h2 class="section-title">Частые вопросы</h2>
+            <h2 class="section-title" id="faq-title">Частые вопросы</h2>
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
@@ -912,15 +937,15 @@
 
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Готовы начать проект?</h2>
+            <h2 class="section-title" id="contact-title">Готовы начать проект?</h2>
             <div class="contact-content">
-                <p class="section-subtitle">Есть идея или проблема, которую нужно решить? Напишите мне — обсудим ваш проект бесплатно и я предложу оптимальное решение</p>
+                <p class="section-subtitle" id="contact-subtitle">Есть идея или проблема, которую нужно решить? Напишите мне — обсудим ваш проект бесплатно и я предложу оптимальное решение</p>
                 <div class="contact-buttons">
-                    <a href="https://t.me/yourusername" class="contact-btn">✈️ Telegram</a>
-                    <a href="https://wa.me/yourphone" class="contact-btn">💬 WhatsApp</a>
-                    <a href="mailto:your@email.com" class="contact-btn">📧 Email</a>
+                    <a href="https://t.me/Infinityroot" class="contact-btn">✈️ Telegram</a>
+                    <a href="https://wa.me/918625093613" class="contact-btn">💬 WhatsApp</a>
+                    <a href="mailto:infinityroot.dev@gmail.com" class="contact-btn">📧 Email</a>
                 </div>
-                <p style="color: #FFFFFF; margin-top: 2rem;">⚡ Отвечаю в течение 2-4 часов</p>
+                <p style="color: #FFFFFF; margin-top: 2rem;" id="contact-response">⚡ Отвечаю в течение 2-4 часов</p>
             </div>
         </div>
     </section>
@@ -949,6 +974,196 @@
                 header.style.background = 'rgba(15, 23, 42, 0.98)';
             } else {
                 header.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+        });
+
+        // Language switching functionality
+        let currentLang = 'ru';
+
+        const translations = {
+            // Hero
+            'hero-title': {
+                ru: 'Разработка под ключ:<br>Боты • Сайты • Автоматизация',
+                en: 'Turnkey Development:<br>Bots • Websites • Automation'
+            },
+            'hero-subtitle': {
+                ru: 'Ваши конкуренты автоматизируют бизнес прямо сейчас. Не отставайте! Telegram-боты, сайты и скрипты, которые работают 24/7 и приносят деньги. Запуск за неделю.',
+                en: 'Your competitors are automating their business right now. Don\'t fall behind! Telegram bots, websites and scripts that work 24/7 and generate revenue. Launch within a week.'
+            },
+            'btn-primary': {
+                ru: 'Получить расчёт стоимости',
+                en: 'Get Cost Estimate'
+            },
+            'btn-secondary': {
+                ru: 'Смотреть примеры работ',
+                en: 'View Portfolio'
+            },
+            
+            // Navigation
+            'nav-about': {
+                ru: 'О себе',
+                en: 'About'
+            },
+            'nav-services': {
+                ru: 'Услуги',
+                en: 'Services'
+            },
+            'nav-portfolio': {
+                ru: 'Портфолио',
+                en: 'Portfolio'
+            },
+            'nav-pricing': {
+                ru: 'Тарифы',
+                en: 'Pricing'
+            },
+            'nav-testimonials': {
+                ru: 'Отзывы',
+                en: 'Testimonials'
+            },
+            'nav-faq': {
+                ru: 'FAQ',
+                en: 'FAQ'
+            },
+            'nav-contact': {
+                ru: 'Контакты',
+                en: 'Contact'
+            },
+            
+            // About Section
+            'about-title': {
+                ru: 'Кто я и чем помогаю',
+                en: 'Who I Am and How I Help'
+            },
+            'about-subtitle': {
+                ru: 'Full-stack разработчик с командой профессионалов',
+                en: 'Full-stack Developer with a Team of Professionals'
+            },
+            
+            // Services Section  
+            'services-title': {
+                ru: 'Что я разрабатываю',
+                en: 'What I Develop'
+            },
+            'services-subtitle': {
+                ru: 'Полный цикл разработки — от идеи до готового продукта',
+                en: 'Full development cycle — from idea to finished product'
+            },
+            'service-bots': {
+                ru: 'Telegram-боты',
+                en: 'Telegram Bots'
+            },
+            'service-websites': {
+                ru: 'Веб-сайты',
+                en: 'Websites'
+            },
+            'service-automation': {
+                ru: 'Автоматизация и скрипты',
+                en: 'Automation & Scripts'
+            },
+            'service-backend': {
+                ru: 'Backend-разработка',
+                en: 'Backend Development'
+            },
+            'service-crm': {
+                ru: 'CRM и admin-панели',
+                en: 'CRM & Admin Panels'
+            },
+            'service-ai': {
+                ru: 'AI-интеграции',
+                en: 'AI Integrations'
+            },
+            
+            // Portfolio Section
+            'portfolio-title': {
+                ru: 'Портфолио',
+                en: 'Portfolio'
+            },
+            'portfolio-subtitle': {
+                ru: 'Реализованные проекты для различных бизнесов',
+                en: 'Completed projects for various businesses'
+            },
+            
+            // Pricing Section
+            'pricing-title': {
+                ru: 'Модели оплаты',
+                en: 'Payment Models'
+            },
+            'pricing-subtitle': {
+                ru: 'Выберите удобный формат сотрудничества',
+                en: 'Choose a convenient cooperation format'
+            },
+            'pricing-hourly': {
+                ru: 'Почасовая',
+                en: 'Hourly'
+            },
+            'pricing-project': {
+                ru: 'За проект',
+                en: 'Per Project'
+            },
+            'pricing-retainer': {
+                ru: 'Ретейнер',
+                en: 'Retainer'
+            },
+            'pricing-hybrid': {
+                ru: 'Гибридная',
+                en: 'Hybrid'
+            },
+            
+            // Testimonials Section
+            'testimonials-title': {
+                ru: 'Отзывы клиентов',
+                en: 'Client Reviews'
+            },
+            'testimonials-subtitle': {
+                ru: 'Что говорят о моей работе',
+                en: 'What clients say about my work'
+            },
+            
+            // FAQ Section
+            'faq-title': {
+                ru: 'Частые вопросы',
+                en: 'Frequently Asked Questions'
+            },
+            
+            // Contact Section
+            'contact-title': {
+                ru: 'Готовы начать проект?',
+                en: 'Ready to Start a Project?'
+            },
+            'contact-subtitle': {
+                ru: 'Есть идея или проблема, которую нужно решить? Напишите мне — обсудим ваш проект бесплатно и я предложу оптимальное решение',
+                en: 'Have an idea or problem to solve? Contact me — let\'s discuss your project for free and I\'ll propose the optimal solution'
+            },
+            'contact-response': {
+                ru: '⚡ Отвечаю в течение 2-4 часов',
+                en: '⚡ Response within 2-4 hours'
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ru' ? 'en' : 'ru';
+            document.getElementById('lang-switcher').textContent = currentLang === 'ru' ? 'EN' : 'RU';
+            
+            // Update all elements with translations
+            Object.keys(translations).forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerHTML = translations[id][currentLang];
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = currentLang;
+            
+            // Save preference
+            localStorage.setItem('preferredLang', currentLang);
+        }
+
+        // Load saved language preference on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLang');
+            if (savedLang && savedLang !== currentLang) {
+                toggleLanguage();
             }
         });
     </script>
